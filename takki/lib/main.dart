@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:takki/routes/routes.dart';
+import 'package:takki/screens/login/login.screen.dart';
 import 'package:takki/widgets/button.widget.dart';
 
 void main() {
@@ -17,16 +18,7 @@ class MainApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: routes,
-      home: Scaffold(
-        body: Center(
-          child: ButtonWidget(
-            text: 'Iniciar sesion',
-            onPressed: () {
-              print('Hello World!');
-            },
-          ),
-        ),
-      ),
+      home: LoginScreen(),
     );
   }
 }

@@ -15,6 +15,7 @@ class TextfielWidget extends StatelessWidget {
     this.suffixIcon,
     this.onsuffixIcon,
     this.isBoldText = false,
+    this.fontSize=20,
   });
 
   final String label;
@@ -28,6 +29,7 @@ class TextfielWidget extends StatelessWidget {
   final IconButton? suffixIcon;
   final Function? onsuffixIcon;
   final bool isBoldText;
+  final double? fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ class TextfielWidget extends StatelessWidget {
       children: [
         Text(
           label,
+          style: TextStyle(fontSize: fontSize,color: Color(0xFF818181)),
         ),
         const SizedBox(height: 5),
         SizedBox(
