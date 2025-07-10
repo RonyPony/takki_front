@@ -6,17 +6,17 @@ final ThemeData lightMode = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: Colors.white,
   textSelectionTheme: const TextSelectionThemeData(
-    cursorColor: primaryColor,
-    selectionHandleColor: primaryColor,
+    // cursorColor: primaryColor,
+    // selectionHandleColor: primaryColor,
   ),
   textTheme: GoogleFonts.imprimaTextTheme(),
   colorScheme: ColorScheme(
     brightness: Brightness.light,
-    primary: primaryColor,
+    primary: Colors.grey.shade300,
     onPrimary: Colors.white,
-    secondary: secondaryColor,
+    secondary: Colors.grey.shade200,
     onSecondary: Colors.black,
-    surface: Colors.grey.shade100,
+    surface: Colors.grey.shade400,
     onSurface: Colors.black,
     error: errorColor,
     onError: Colors.white,
@@ -28,23 +28,23 @@ final ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
   scaffoldBackgroundColor: const Color(0xFF121212),
   textSelectionTheme: const TextSelectionThemeData(
-    cursorColor: primaryColor,
-    selectionHandleColor: primaryColor,
+    // cursorColor: primaryColor,
+    // selectionHandleColor: primaryColor,
   ),
   textTheme: GoogleFonts.imprimaTextTheme(ThemeData.dark().textTheme),
   colorScheme: ColorScheme(
     brightness: Brightness.dark,
-    primary: primaryColor,
+    primary: Colors.grey.shade800,
     onPrimary: Colors.black,
-    secondary: secondaryColor,
+    secondary: Colors.grey.shade700,
     onSecondary: Colors.black,
-    surface: const Color(0xFF1E1E1E),
+    surface: Colors.grey.shade900,
     onSurface: Colors.white,
     error: errorColor,
     onError: Colors.black,
   ),
 );
 
-const primaryColor = Color(0xFF43B3AE);
-const secondaryColor = Colors.grey;
+// const primaryColor = Color(0xFF43B3AE);
+// const secondaryColor = Colors.grey;
 const errorColor = Color.fromARGB(255, 167, 31, 56);

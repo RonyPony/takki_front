@@ -36,7 +36,7 @@ class ChatElementCard extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: myTheme.colorScheme.primary,
           border: Border.all(
             color: isRead ? Colors.grey.shade300 : Color(0xFF43B3AE),
             width: 3,
@@ -61,7 +61,7 @@ class ChatElementCard extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 32,
-                      color: Colors.black87,
+                      // color: Colors.black87,
                     ),
                   ),
                 ),
@@ -74,7 +74,10 @@ class ChatElementCard extends StatelessWidget {
             const SizedBox(height: 6),
             Text(
               message,
-              style: const TextStyle(fontSize: 16, color: Colors.black54),
+              style: const TextStyle(
+                fontSize: 16,
+                // color: Colors.black54
+              ),
             ),
           ],
         ),
