@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:takki/screens/chats/newChat.screen.dart';
 import 'package:takki/screens/login/login.screen.dart';
+import 'package:takki/screens/profile/profileScreens.dart';
 import 'package:takki/widgets/chatElement.widget.dart';
 
 class ChatsScreen extends StatelessWidget {
@@ -31,10 +32,15 @@ class ChatsScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15),
-                    child: SvgPicture.asset(
-                      'assets/layout/fingerprint1.svg',
-                      width: 50,
-                      height: 50,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, ProfileScreen.routeName);
+                      },
+                      child: SvgPicture.asset(
+                        'assets/layout/fingerprint1.svg',
+                        width: 50,
+                        height: 50,
+                      ),
                     ),
                   ),
                 ],

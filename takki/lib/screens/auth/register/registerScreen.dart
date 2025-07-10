@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:takki/widgets/button.widget.dart';
 import 'package:takki/widgets/textFiel.widget.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -7,37 +8,48 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextEditingController nameController = TextEditingController();
+    final TextEditingController phoneController = TextEditingController();
+    final TextEditingController passwordController = TextEditingController();
+    final TextEditingController coonfirmPasswordController =
+        TextEditingController();
     Size base = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Registro',
-          style: TextStyle(fontSize: 30),
-        ),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            TextfielWidget(
-                label: "Nombre",
-                controller: nameController,
-                width: base.width * 0.9),
-            TextfielWidget(
-                label: "Correo",
-                controller: nameController,
-                width: base.width * 0.9),
-            TextfielWidget(
-                label: "Contraseña",
-                controller: nameController,
-                width: base.width * 0.9),
-            TextfielWidget(
-                label: "Confirmar Contraseña",
-                controller: nameController,
-                width: base.width * 0.9),
-            const SizedBox(
-              height: 30,
-            ),
-          ],
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              const Text(
+                'Registro',
+                style: TextStyle(fontSize: 50, color: Color(0xFF818181)),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              TextfielWidget(
+                  label: "Nombre",
+                  controller: nameController,
+                  width: base.width * 0.9),
+              TextfielWidget(
+                  label: "Telefono",
+                  controller: phoneController,
+                  width: base.width * 0.9),
+              TextfielWidget(
+                  label: "Contraseña",
+                  controller: passwordController,
+                  width: base.width * 0.9),
+              TextfielWidget(
+                  label: "Confirmar Contraseña",
+                  controller: coonfirmPasswordController,
+                  width: base.width * 0.9),
+              Spacer(),
+              ButtonWidget(
+                text: "Registrarse",
+                onPressed: () {},
+              ),
+              Spacer(),
+            ],
+          ),
         ),
       ),
     );
