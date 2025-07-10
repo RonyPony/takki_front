@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:takki/routes/routes.dart';
 import 'package:takki/screens/login/login.screen.dart';
 import 'package:takki/widgets/button.widget.dart';
@@ -15,6 +16,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         theme: ThemeData(
+          textTheme: GoogleFonts.imprimaTextTheme(),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
           primarySwatch: Colors.blue,
         ),
