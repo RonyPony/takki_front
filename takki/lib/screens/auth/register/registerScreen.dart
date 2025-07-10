@@ -14,11 +14,37 @@ class RegisterScreen extends StatelessWidget {
         TextEditingController();
     Size base = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(),
       body: SafeArea(
         child: Center(
           child: Column(
             children: [
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Color(0xFF43B3AE),
+                      )),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      "Regresar",
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF43B3AE)),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
               const Text(
                 'Registro',
                 style: TextStyle(fontSize: 50, color: Color(0xFF818181)),
