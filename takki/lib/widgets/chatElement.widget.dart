@@ -9,17 +9,18 @@ class ChatElementCard extends StatelessWidget {
   final bool isRead;
 
   const ChatElementCard({
-    Key? key,
+    super.key,
     required this.sender,
     required this.time,
     required this.message,
     this.onSwipeLeft,
     this.onSwipeRight,
     this.isRead = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
+    ThemeData myTheme = Theme.of(context);
     return Dismissible(
       key: ValueKey('$sender-$time'),
       background: swipeRightBackground(),
@@ -36,7 +37,10 @@ class ChatElementCard extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(color: isRead ? Colors.grey.shade300 : Color(0xFF43B3AE),width: 3),
+          border: Border.all(
+            color: isRead ? Colors.grey.shade300 : Color(0xFF43B3AE),
+            width: 3,
+          ),
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
@@ -63,20 +67,14 @@ class ChatElementCard extends StatelessWidget {
                 ),
                 Text(
                   time,
-                  style: const TextStyle(
-                    fontSize: 13,
-                    color: Colors.grey,
-                  ),
+                  style: const TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ],
             ),
             const SizedBox(height: 6),
             Text(
               message,
-              style: const TextStyle(
-                fontSize: 16,
-                color: Colors.black54,
-              ),
+              style: const TextStyle(fontSize: 16, color: Colors.black54),
             ),
           ],
         ),
