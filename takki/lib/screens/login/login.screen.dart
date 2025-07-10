@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:takki/screens/chats/chats.screen.dart';
 import 'package:takki/widgets/textFiel.widget.dart';
 
 import '../../widgets/button.widget.dart';
@@ -36,10 +37,15 @@ class LoginScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30),
-                child: Text('Olvidaste tu contraseña?',style: TextStyle(fontSize: 24, fontWeight: FontWeight.normal,color: Color(0xFF818181)),),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, LoginScreen.routeName);
+                  },
+                  child: Text('Olvidaste tu contraseña?',style: TextStyle(fontSize: 24, fontWeight: FontWeight.normal,color: Color(0xFF818181)),),
+                ),
               ),
               ButtonWidget(text: 'Iniciar sesion',fontSize: 35,onPressed: () {
-                Navigator.pushNamed(context, LoginScreen.routeName);
+                Navigator.pushNamed(context, ChatsScreen.routeName);
               },),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 40),
