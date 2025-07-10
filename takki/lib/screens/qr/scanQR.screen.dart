@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:takki/screens/chats/chats.screen.dart';
 import 'package:takki/widgets/button.widget.dart';
 
 class ScanQR extends StatelessWidget {
@@ -13,7 +11,7 @@ class ScanQR extends StatelessWidget {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [            
+          children: [
             Padding(
               padding: const EdgeInsets.only(top: 40),
               child: Row(
@@ -23,18 +21,20 @@ class ScanQR extends StatelessWidget {
                   Container(
                     width: MediaQuery.of(context).size.width * 0.9,
                     height: 270,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                    ),
-                  )
+                    decoration: BoxDecoration(color: Colors.black),
+                  ),
                 ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 40),
-              child: ButtonWidget(text: 'Regresar',fontSize: 28,onPressed: () {
-                Navigator.pop(context);
-              },),
+              child: ButtonWidget(
+                text: 'Regresar',
+                fontSize: 28,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ),
           ],
         ),

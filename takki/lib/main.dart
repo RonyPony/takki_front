@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:takki/firebase_options.dart';
 import 'package:takki/routes/routes.dart';
 import 'package:takki/screens/landing/landingScreen.dart';
+import 'package:takki/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,14 +27,11 @@ class MainApp extends StatelessWidget {
       },
       behavior: HitTestBehavior.translucent,
       child: MaterialApp(
-          theme: ThemeData(
-            textTheme: GoogleFonts.imprimaTextTheme(),
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-            useMaterial3: true,
-            primarySwatch: Colors.blue,
-          ),
-          routes: routes,
-          home: LandingScreen()),
+        theme: lightMode,
+        darkTheme: darkMode,
+        routes: routes,
+        home: LandingScreen(),
+      ),
     );
   }
 }

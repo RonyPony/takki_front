@@ -9,17 +9,18 @@ class ChatElementCard extends StatelessWidget {
   final bool isRead;
 
   const ChatElementCard({
-    Key? key,
+    super.key,
     required this.sender,
     required this.time,
     required this.message,
     this.onSwipeLeft,
     this.onSwipeRight,
     this.isRead = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
+    ThemeData myTheme = Theme.of(context);
     return Dismissible(
       key: ValueKey('$sender-$time'),
       background: swipeRightBackground(),
@@ -35,8 +36,11 @@ class ChatElementCard extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: isRead ? Colors.grey.shade300 : Color(0xFF43B3AE),width: 3),
+          color: myTheme.colorScheme.primary,
+          border: Border.all(
+            color: isRead ? Colors.grey.shade300 : Color(0xFF43B3AE),
+            width: 3,
+          ),
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
@@ -57,16 +61,13 @@ class ChatElementCard extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 32,
-                      color: Colors.black87,
+                      // color: Colors.black87,
                     ),
                   ),
                 ),
                 Text(
                   time,
-                  style: const TextStyle(
-                    fontSize: 13,
-                    color: Colors.grey,
-                  ),
+                  style: const TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ],
             ),
@@ -75,7 +76,7 @@ class ChatElementCard extends StatelessWidget {
               message,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.black54,
+                // color: Colors.black54
               ),
             ),
           ],
