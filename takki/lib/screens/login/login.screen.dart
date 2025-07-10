@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Takki',style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold,color: Color(0xFF818181)),),
+                    Text('Takki',style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold,color: Color(0xFF818181)),),
                   ],
                 ),
               ),

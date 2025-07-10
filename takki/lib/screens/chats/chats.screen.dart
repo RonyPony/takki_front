@@ -13,28 +13,31 @@ class ChatsScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Text(
-                    'Chats',
-                    style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.normal,
-                        color: Color(0xFF818181)),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Text(
+                      'Chats',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.normal,
+                          color: Color(0xFF818181)),
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: SvgPicture.asset(
-                    'assets/layout/fingerprint1.svg',
-                    width: 50,
-                    height: 50,
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: SvgPicture.asset(
+                      'assets/layout/fingerprint1.svg',
+                      width: 50,
+                      height: 50,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             // Lista de nombres y mensajes aleatorios
             Expanded(
@@ -68,6 +71,36 @@ class ChatsScreen extends StatelessWidget {
                     sender: 'Pedro',
                     time: 'Hace 5 min',
                     message: '¿Jugamos esta noche?',
+                    isRead: true,
+                  ),
+                  ChatElementCard(
+                    sender: 'Sofía',
+                    time: 'Hace 3 días',
+                    message: '¿Me puedes enviar el archivo?',
+                    isRead: true,
+                  ),
+                  ChatElementCard(
+                    sender: 'Javier',
+                    time: 'Hace 20 min',
+                    message: 'Ya llegué al lugar.',
+                    isRead: true,
+                  ),
+                  ChatElementCard(
+                    sender: 'Ana',
+                    time: 'Hace 8 horas',
+                    message: 'Gracias por tu ayuda.',
+                    isRead: true,
+                  ),
+                  ChatElementCard(
+                    sender: 'Miguel',
+                    time: 'Hace 15 min',
+                    message: '¿Dónde estás?',
+                    isRead: true,
+                  ),
+                  ChatElementCard(
+                    sender: 'Valeria',
+                    time: 'Hace 4 días',
+                    message: '¡Nos vemos pronto!',
                     isRead: true,
                   ),
                 ],
