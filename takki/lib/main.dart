@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: ButtonWidget(
-            text: 'Iniciar Sesion',
+            text: 'Iniciar sesion',
             onPressed: () {
               print('Hello World!');
             },
