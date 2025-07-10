@@ -12,12 +12,19 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        useMaterial3: true,
+        primarySwatch: Colors.blue,
+      ),
       routes: routes,
-      home:  Scaffold(
+      home: Scaffold(
         body: Center(
-          child: ButtonWidget(text: 'Iniciar Sesion',onPressed: () {
-            print('Hello World!');
-          },),
+          child: ButtonWidget(
+            text: 'Iniciar Sesion',
+            onPressed: () {
+              print('Hello World!');
+            },
+          ),
         ),
       ),
     );
