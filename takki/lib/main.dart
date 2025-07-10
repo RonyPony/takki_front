@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:takki/routes/routes.dart';
-import 'package:takki/screens/login/login.screen.dart';
-import 'package:takki/widgets/button.widget.dart';
 import 'package:takki/screens/landing/landingScreen.dart';
 
 void main() {
