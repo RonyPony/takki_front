@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:takki/screens/auth/register/registerScreen.dart';
 import 'package:takki/screens/chats/chats.screen.dart';
+import 'package:takki/screens/chats/newChat.screen.dart';
 import 'package:takki/screens/landing/landingScreen.dart';
 
 import '../screens/auth/login/login.screen.dart';
@@ -10,5 +11,6 @@ final Map<String, WidgetBuilder> routes = {
   LoginScreen.routeName: (context) => const LoginScreen(),
   ChatsScreen.routeName: (context) => const ChatsScreen(),
   RegisterScreen.routeName: (context) => const RegisterScreen(),
+  NewChatScreen.routeName: (context) => const NewChatScreen(),
   // '/ruta': (context) => PaginaWidget(),
 };
