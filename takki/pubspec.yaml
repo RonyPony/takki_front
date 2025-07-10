@@ -22,3 +22,4 @@ flutter:
   assets:
     - assets/layout/fingerprint1.svg
     - assets/layout/lock.svg
+    - assets/layout/testQR.svg

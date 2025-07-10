@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:takki/screens/chats/newChat.screen.dart';
-import 'package:takki/screens/login/login.screen.dart';
 import 'package:takki/screens/profile/profileScreens.dart';
 import 'package:takki/widgets/chatElement.widget.dart';
 

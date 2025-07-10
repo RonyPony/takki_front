@@ -4,6 +4,8 @@ import 'package:takki/screens/chats/chats.screen.dart';
 import 'package:takki/screens/chats/newChat.screen.dart';
 import 'package:takki/screens/landing/landingScreen.dart';
 import 'package:takki/screens/profile/profileScreens.dart';
+import 'package:takki/screens/qr/scanQR.screen.dart';
+import 'package:takki/screens/qr/viewQR.screen.dart';
 
 import '../screens/auth/login/login.screen.dart';
 
@@ -14,5 +16,7 @@ final Map<String, WidgetBuilder> routes = {
   RegisterScreen.routeName: (context) => const RegisterScreen(),
   NewChatScreen.routeName: (context) => const NewChatScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
+  ScanQR.routeName: (context) => const ScanQR(),
   // '/ruta': (context) => PaginaWidget(),
+  ViewQR.routeName: (context) => const ViewQR(),
 };

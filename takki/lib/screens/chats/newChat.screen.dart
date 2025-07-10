@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:takki/screens/chats/chats.screen.dart';
+import 'package:takki/screens/qr/scanQR.screen.dart';
+import 'package:takki/screens/qr/viewQR.screen.dart';
 import 'package:takki/widgets/button.widget.dart';
 
 class NewChatScreen extends StatelessWidget {
@@ -36,19 +38,19 @@ class NewChatScreen extends StatelessWidget {
                 Padding(
               padding: const EdgeInsets.only(top: 40),
               child: ButtonWidget(text: 'Ver mi codigo QR',fontSize: 28,onPressed: () {
-                Navigator.pushNamed(context, ChatsScreen.routeName);
+                Navigator.pushNamed(context, ViewQR.routeName);
               },),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20),
-              child: ButtonWidget(text: 'Enviar codigo QR',fontSize: 28,onPressed: () {
+              child: ButtonWidget(text: 'Compartir codigo QR',fontSize: 28,onPressed: () {
                 Navigator.pushNamed(context, ChatsScreen.routeName);
               },),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20,bottom: 20),
               child: ButtonWidget(text: 'Escanear codigo QR',fontSize: 28,onPressed: () {
-                Navigator.pushNamed(context, ChatsScreen.routeName);
+                Navigator.pushNamed(context, ScanQR.routeName);
               },),
             ),
               ],
