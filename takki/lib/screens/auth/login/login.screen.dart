@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:takki/screens/auth/login/phone.dart';
 import 'package:takki/screens/auth/register/registerScreen.dart';
 import 'package:takki/screens/chats/chats.screen.dart';
 import 'package:takki/widgets/textFiel.widget.dart';
@@ -73,7 +72,7 @@ class LoginScreen extends StatelessWidget {
               fontSize: 35,
               onPressed: () {
                 // Navigator.pushNamed(context, ChatsScreen.routeName);
-                Navigator.pushNamed(context, PhoneAuthPage.routeName);
+                Navigator.pushNamed(context, ChatsScreen.routeName);
               },
             ),
             Padding(

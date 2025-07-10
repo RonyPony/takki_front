@@ -26,3 +26,4 @@ flutter:
     - assets/layout/lock.svg
     - assets/layout/testQR.svg
     - assets/layout/profile.svg
+    - assets/layout/send.svg

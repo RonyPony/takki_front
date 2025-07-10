@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:takki/screens/chats/chat.screen.dart';
 
 class ChatElementCard extends StatelessWidget {
   final String sender;
@@ -32,54 +33,59 @@ class ChatElementCard extends StatelessWidget {
           onSwipeLeft?.call();
         }
       },
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-        padding: const EdgeInsets.all(12.0),
-        decoration: BoxDecoration(
-          color: myTheme.colorScheme.primary,
-          border: Border.all(
-            color: isRead ? myTheme.colorScheme.primary : Color(0xFF43B3AE),
-            width: 3,
-          ),
-          borderRadius: BorderRadius.circular(12),
-          boxShadow: [
-            BoxShadow(
-              color: myTheme.colorScheme.primary,
-              blurRadius: 4,
-              offset: const Offset(0, 2),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, ChatScreen.routeName, arguments: sender);
+        },
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+          padding: const EdgeInsets.all(12.0),
+          decoration: BoxDecoration(
+            color: myTheme.colorScheme.primary,
+            border: Border.all(
+              color: isRead ? myTheme.colorScheme.primary : Color(0xFF43B3AE),
+              width: 3,
             ),
-          ],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    sender,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 32,
-                      // color: Colors.black87,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: myTheme.colorScheme.primary,
+                blurRadius: 4,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      sender,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 32,
+                        // color: Colors.black87,
+                      ),
                     ),
                   ),
-                ),
-                Text(
-                  time,
-                  style: const TextStyle(fontSize: 13, color: Colors.grey),
-                ),
-              ],
-            ),
-            const SizedBox(height: 6),
-            Text(
-              message,
-              style: const TextStyle(
-                fontSize: 16,
-                // color: Colors.black54
+                  Text(
+                    time,
+                    style: const TextStyle(fontSize: 13, color: Colors.grey),
+                  ),
+                ],
               ),
-            ),
-          ],
+              const SizedBox(height: 6),
+              Text(
+                message,
+                style: const TextStyle(
+                  fontSize: 16,
+                  // color: Colors.black54
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

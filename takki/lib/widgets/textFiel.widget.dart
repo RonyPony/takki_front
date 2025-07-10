@@ -15,7 +15,7 @@ class TextfielWidget extends StatelessWidget {
     this.suffixIcon,
     this.onsuffixIcon,
     this.isBoldText = false,
-    this.fontSize=20,
+    this.fontSize=20, this.showLabel = true,
   });
 
   final String label;
@@ -30,16 +30,17 @@ class TextfielWidget extends StatelessWidget {
   final Function? onsuffixIcon;
   final bool isBoldText;
   final double? fontSize;
-
+  final bool showLabel;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          label,
-          style: TextStyle(fontSize: fontSize,color: Color(0xFF818181)),
-        ),
+        if (showLabel)
+          Text(
+            label,
+            style: TextStyle(fontSize: fontSize,color: Color(0xFF818181)),
+          ),
         const SizedBox(height: 5),
         SizedBox(
           width: width,
