@@ -24,9 +24,10 @@ class ChatsScreen extends StatelessWidget {
                     child: Text(
                       'Chats',
                       style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.normal,
-                          color: Color(0xFF818181)),
+                        fontSize: 40,
+                        fontWeight: FontWeight.normal,
+                        color: Color(0xFF818181),
+                      ),
                     ),
                   ),
                   Padding(

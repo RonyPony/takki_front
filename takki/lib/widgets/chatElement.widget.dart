@@ -38,13 +38,13 @@ class ChatElementCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: myTheme.colorScheme.primary,
           border: Border.all(
-            color: isRead ? Colors.grey.shade300 : Color(0xFF43B3AE),
+            color: isRead ? myTheme.colorScheme.primary : Color(0xFF43B3AE),
             width: 3,
           ),
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.shade200,
+              color: myTheme.colorScheme.primary,
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),
