@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:takki/screens/chats/newChat.screen.dart';
 import 'package:takki/screens/login/login.screen.dart';
 import 'package:takki/widgets/chatElement.widget.dart';
 
@@ -111,10 +112,10 @@ class ChatsScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Aquí puedes agregar la acción que desees, por ejemplo, crear un nuevo chat
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Nuevo chat')),
-          );
+          Navigator.pushNamed(context, NewChatScreen.routeName);
+          // ScaffoldMessenger.of(context).showSnackBar(
+          //   SnackBar(content: Text('Nuevo chat')),
+          // );
         },
         backgroundColor: Color(0xFF43B3AE),
         child: const Icon(Icons.add, color: Colors.white, size: 32),
