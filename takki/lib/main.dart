@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:takki/routes/routes.dart';
 import 'package:takki/widgets/button.widget.dart';
 
 void main() {
@@ -10,8 +11,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
+    return MaterialApp(
+      routes: routes,
+      home: const Scaffold(
         body: Center(
           child: ButtonWidget(text: 'Hello World!'),
         ),
