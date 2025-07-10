@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
       routes: routes,
       home:  Scaffold(
         body: Center(
-          child: ButtonWidget(text: 'Iniciar Sesion',onPressed: () {
+          child: ButtonWidget(text: 'Iniciar sesion',onPressed: () {
             print('Hello World!');
           },),
         ),
