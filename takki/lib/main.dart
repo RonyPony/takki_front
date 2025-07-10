@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: routes,
-      home: const Scaffold(
+      home:  Scaffold(
         body: Center(
           child: ButtonWidget(text: 'Iniciar Sesion',onPressed: () {
             print('Hello World!');
