@@ -16,6 +16,7 @@ class ProfileScreen extends StatelessWidget {
         TextEditingController();
     Size base = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -69,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                   width: base.width * 0.9),
               Spacer(),
               ButtonWidget(
-                text: "Registrarse",
+                text: "Acutualizar",
                 onPressed: () {},
               ),
               Spacer(),

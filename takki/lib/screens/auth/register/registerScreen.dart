@@ -14,6 +14,7 @@ class RegisterScreen extends StatelessWidget {
         TextEditingController();
     Size base = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Center(
           child: Column(

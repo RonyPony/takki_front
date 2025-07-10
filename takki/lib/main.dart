@@ -12,14 +12,20 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        theme: ThemeData(
-          textTheme: GoogleFonts.imprimaTextTheme(),
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          useMaterial3: true,
-          primarySwatch: Colors.blue,
-        ),
-        routes: routes,
-        home: LandingScreen());
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      behavior: HitTestBehavior.translucent,
+      child: MaterialApp(
+          theme: ThemeData(
+            textTheme: GoogleFonts.imprimaTextTheme(),
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+            useMaterial3: true,
+            primarySwatch: Colors.blue,
+          ),
+          routes: routes,
+          home: LandingScreen()),
+    );
   }
 }
